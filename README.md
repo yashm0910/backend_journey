@@ -16,3 +16,6 @@
 
 ## DAY 7-14 (11-17)
 - defined methods in defining generic foreign keys  and content types
+- mada database linking
+- undo redo databse changes using migrations
+- orm -object relational mapper --> tool to skip object creation again and again
