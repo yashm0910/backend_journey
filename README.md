@@ -19,3 +19,5 @@
 - mada database linking
 - undo redo databse changes using migrations
 - orm -object relational mapper --> tool to skip object creation again and again
+- learnt fetching data using query set api commands
+- used multiple filters and learnt its types
