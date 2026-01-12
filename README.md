@@ -21,3 +21,6 @@
 - orm -object relational mapper --> tool to skip object creation again and again
 - learnt fetching data using query set api commands
 - used multiple filters and learnt its types
+- Q() - refer to a query
+- F() - refer to a field
+  
