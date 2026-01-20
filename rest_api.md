@@ -47,3 +47,5 @@
 
 - if handling an exception ,instead of using 'magic numers' like 'status=404' ,we should use constants for better readability
 - URL patterns like "products/<int:id>" ,we can access products using their specific id
+
+API MODELS != DATA MODELS -bcz API models are interface ,but data models is real implementation of the project
