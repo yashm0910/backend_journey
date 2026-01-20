@@ -38,3 +38,12 @@
 - DELETE -to delete a resource
 
 # Serializers [24 mins-ch]
+- used to converts model objects in form of dictionary
+- created serializers.py ,made similar class to products model with objects only what to fetch in dictionary
+- added :   REST_FRAMEWORK={
+            'COERCE_DECIMAL_TO_STRING': False
+            }
+  so decimals are in form of decimal not string
+
+  - if handling an exception ,instead of using 'magic numers' like 'status=404' ,we should use constants for better readability
+  - URL patterns like "products/<int:id>" ,we can access products using their specific id
