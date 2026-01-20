@@ -1,0 +1,40 @@
+# DJANGO-REST-FRAMEWORK
+
+
+- API-application programming interface 
+- just like buttons on remote,endpoints are buttons to control datat retrieval
+- example: http://127.0.0.1:8000/store/products/1 
+- here 'store' is main router to the desiredapp
+- also , products is router to the desired view in store/views.py 
+- client --> request using endpoints --> response generated 
+
+
+ REST- Representation State Transfer
+- rest defines bunch of rules ,client use these rules to interact with the web
+- makes pis scalable ,reliable ,fast,ease of understaanding
+- main rules that make an api restful are:
+
+1.resources
+2.resource representation
+3.http methods 
+
+### Resources
+- objects what client wanna interact with
+- example: http://127.0.0.1:8000/store/products/1 
+- here ,store , products are nothing else but resources 
+- more resources in the URL can just raise complexities and make urls messy
+
+### Representations
+- how the resources are returned
+- html , xml ,json [main formats of response that clients understand]
+
+### HTTP Methods
+- each endpoint supports various kinds of opertions ,some allow reading,some allow writing
+- http methods is how clients tell the server ,what they have to do with resource
+-  GET -getting resource
+- POST -creating resource
+- PUT -updating the resource
+- PATCH -updating a part of the resource
+- DELETE -to delete a resource
+
+# Serializers [24 mins-ch]
