@@ -45,5 +45,5 @@
             }
   so decimals are in form of decimal not string
 
-  - if handling an exception ,instead of using 'magic numers' like 'status=404' ,we should use constants for better readability
-  - URL patterns like "products/<int:id>" ,we can access products using their specific id
+- if handling an exception ,instead of using 'magic numers' like 'status=404' ,we should use constants for better readability
+- URL patterns like "products/<int:id>" ,we can access products using their specific id
