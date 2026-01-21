@@ -49,3 +49,6 @@
 - URL patterns like "products/<int:id>" ,we can access products using their specific id
 
 API MODELS != DATA MODELS -bcz API models are interface ,but data models is real implementation of the project ,So changing an API we need to study impact of the change before building respective versions of that API
+
+- learned to apply methods in serialized objects using SerializerMethodField(method_name='method_name')
+- PrimaryKeyRelatedField may be used to represent the target of the relationship using its primary key.
