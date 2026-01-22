@@ -55,11 +55,8 @@ API MODELS != DATA MODELS -bcz API models are interface ,but data models is real
 
 - we use 'class Meta:' as an inner class that holds metadata (configuration/settings) about the main class
 - with meta ,the logics + model attributes arent messed up and handled seperately
-- INDIDE META Class:
-
-'''Python
-class Meta:
-    # 1. Which MODEL to use
+- class Meta:
+    # 1. Which MODEL to use 
     model = Product
     
     # 2. Which FIELDS to include from the MODEL
@@ -70,29 +67,3 @@ class Meta:
     depth = 1                     # How deep to follow relationships
     read_only_fields = ['id']    # Fields users can't modify
     exclude = ['password']       # Fields to exclude
-'''
-
-- OUTSIDE META Class:
-
-'''Python
-class ProductSerializer(serializers.ModelSerializer):
-    # 1. CUSTOM FIELDS (not in original model)
-    price_with_tax = serializers.SerializerMethodField()
-    discount_percentage = serializers.DecimalField(max_digits=5, decimal_places=2)
-    
-    # 2. METHODS for custom calculations
-    def get_price_with_tax(self, obj):
-        # Business logic here
-        return obj.price * Decimal('1.1')
-    
-    # 3. VALIDATION methods
-    def validate_price(self, value):
-        if value < 0:
-            raise serializers.ValidationError("Price can't be negative")
-        return value
-    
-    # 4. CONFIGURATION (Meta class)
-    class Meta:
-        model = Product
-        fields = ['id', 'title', 'price', 'price_with_tax', 'collection']
-'''
