@@ -55,15 +55,16 @@ API MODELS != DATA MODELS -bcz API models are interface ,but data models is real
 
 - we use 'class Meta:' as an inner class that holds metadata (configuration/settings) about the main class
 - with meta ,the logics + model attributes arent messed up and handled seperately
+ # INSIDE META
 - class Meta:
-    # 1. Which MODEL to use 
+    // 1. Which MODEL to use 
     model = Product
     
-    # 2. Which FIELDS to include from the MODEL
+    // 2. Which FIELDS to include from the MODEL
     fields = ['id', 'title', 'price', 'collection']
-    # These MUST exist in the Product model
+    / These MUST exist in the Product model
     
-    # 3. Other CONFIGURATION (no logic!)
-    depth = 1                     # How deep to follow relationships
-    read_only_fields = ['id']    # Fields users can't modify
-    exclude = ['password']       # Fields to exclude
+    // 3. Other CONFIGURATION (no logic!)
+    depth = 1                     / How deep to follow relationships
+    read_only_fields = ['id']    / Fields users can't modify
+    exclude = ['password']       / Fields to exclude
