@@ -55,16 +55,18 @@ API MODELS != DATA MODELS -bcz API models are interface ,but data models is real
 
 - we use 'class Meta:' as an inner class that holds metadata (configuration/settings) about the main class
 - with meta ,the logics + model attributes arent messed up and handled seperately
- # INSIDE META
-- class Meta:
-    // 1. Which MODEL to use 
-    model = Product
-    
-    // 2. Which FIELDS to include from the MODEL
-    fields = ['id', 'title', 'price', 'collection']
-    / These MUST exist in the Product model
-    
-    // 3. Other CONFIGURATION (no logic!)
-    depth = 1                     / How deep to follow relationships
-    read_only_fields = ['id']    / Fields users can't modify
-    exclude = ['password']       / Fields to exclude
+ 
+ - INSIDE/OUTSIDE META
+ - class Meta:
+ - // 1. Which MODEL to use
+ - // 2. fields to use
+ - outside meta ,logics of the attributes
+
+- @api_view(['GET','POST']) -decorators
+- GET() is default so we dont need to pass array untill we add more methods
+- in serialization , we do pass data-> get json 
+- in desrialization ,we pass json-> get object  
+- Mode 1: SERIALIZATION (Object → JSON)
+- Mode 2: DESERIALIZATION (JSON → Object)
+- if data.is_valid() ,perform an operattion ,return response as needed  
+
