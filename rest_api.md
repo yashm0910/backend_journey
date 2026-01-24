@@ -68,5 +68,8 @@ API MODELS != DATA MODELS -bcz API models are interface ,but data models is real
 - in desrialization ,we pass json-> get object  
 - Mode 1: SERIALIZATION (Object → JSON)
 - Mode 2: DESERIALIZATION (JSON → Object)
-- if data.is_valid() ,perform an operattion ,return response as needed  
+- if data.is_valid() ,perform an operattion ,return response as needed
+
+- learnt to GET and POST an object
+-  learnt to update an oject(PUT)
 
