@@ -72,4 +72,6 @@ API MODELS != DATA MODELS -bcz API models are interface ,but data models is real
 
 - learnt to GET and POST an object
 -  learnt to update an oject(PUT)
+-  Built needful methods for each kind of request for both products and collections
+-  built class based view for products
 
