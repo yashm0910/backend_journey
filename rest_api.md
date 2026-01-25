@@ -75,3 +75,6 @@ API MODELS != DATA MODELS -bcz API models are interface ,but data models is real
 -  Built needful methods for each kind of request for both products and collections
 -  built class based view for products
 
+Mixins - they are the tools that used to encapsulate particular set of code [upper explanation]
+-generic views/class based views -concrete classes that combine one or more mixins
+-viewsets are combination of multiple generic views
